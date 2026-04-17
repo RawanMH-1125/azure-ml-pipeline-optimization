@@ -105,28 +105,6 @@ Model details:
 
 ---
 
-## Project Structure
-
-
-project/
-│
-├── README.md
-├── train.py
-├── automl.ipynb
-├── hyperdrive.ipynb
-│
-└── images/
-├── cpu_cluster.png
-├── hyperdrive_metric.png
-├── hyperdrive_summary.png
-├── automl_best_model.png
-├── automl_metrics.png
-├── automl_metrics1.png
-└── registered_model.png
-
-
----
-
 ## Conclusion
 
 HyperDrive improved the performance of the Logistic Regression model through hyperparameter tuning. However, AutoML identified a more optimal model, XGBoost, which achieved better overall performance.
