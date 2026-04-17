@@ -25,6 +25,9 @@ The objective is to evaluate both approaches and register the best-performing mo
 A CPU-based compute cluster was created and used to execute all experiments in Azure Machine Learning.
 
 ![CPU Cluster](images/cpu_cluster.png)
+<p align="center">
+  <img src="images/cpu.cluster.png" width="500"/>
+</p>
 
 ---
 
