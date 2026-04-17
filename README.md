@@ -13,9 +13,8 @@ The objective is to evaluate both approaches and register the best-performing mo
 
 ## Project Architecture
 
-![Architecture](images/Digram.png)
 <p align="center">
-  <img src="images/Diagram.png" width="500"/>
+  <img src="images/Digram.png" width="500"/>  
 </p>
 
 ---
@@ -24,9 +23,8 @@ The objective is to evaluate both approaches and register the best-performing mo
 
 A CPU-based compute cluster was created and used to execute all experiments in Azure Machine Learning.
 
-![CPU Cluster](images/cpu_cluster.png)
 <p align="center">
-  <img src="images/cpu.cluster.png" width="500"/>
+  <img src="images/cpu_cluster.png" width="600"/>
 </p>
 
 ---
@@ -54,8 +52,12 @@ The tuning strategy included random sampling and early stopping to efficiently e
 
 Results are shown below:
 
-![HyperDrive Metrics](images/hyperdrive_metric.png)  
-![HyperDrive Summary](images/hyperdrive_summary.png)
+<p align="center">
+  <img src="images/hyperdrive_metric.png" width="800"/>  
+</p>
+<p align="center">
+  <img src="images/hyperdrive_summary.png" width="800"/>  
+</p>
 
 The best model achieved an accuracy of approximately 0.9138.
 
@@ -69,7 +71,9 @@ The best model identified was XGBoost.
 
 Results are shown below:
 
-![AutoML Best Model](images/automl_best_model.png)
+<p align="center">
+  <img src="images/automl_best_model.png" width="700"/>  
+</p> 
 
 The best model achieved an AUC of approximately 0.945.
 
@@ -101,7 +105,9 @@ Based on these results, the AutoML model was selected as the best model.
 
 The best AutoML model was registered using MLflow.
 
-![Registered Model](images/registered_model.png)
+<p align="center">
+  <img src="images/registered_model.png" width="700"/>  
+</p> 
 
 Model details:
 
@@ -122,3 +128,10 @@ The final model was successfully registered and is ready for deployment.
 ## Future Work
 
 Possible improvements include deploying the model as a real-time endpoint, performing feature importance analysis, and optimizing the model further based on business requirements.
+
+
+## Author:
+
+# Rawan Alhammad  
+Azure Machine Learning Project 
+
