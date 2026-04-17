@@ -14,7 +14,9 @@ The objective is to evaluate both approaches and register the best-performing mo
 ## Project Architecture
 
 ![Architecture](images/Digram.png)
-
+<p align="center">
+  <img src="images/diagram.png" width="500"/>
+</p>
 ---
 
 ## Compute Setup
