@@ -13,7 +13,7 @@ The objective is to evaluate both approaches and register the best-performing mo
 
 ## Project Architecture
 
-![Architecture](images/digram.png)
+![Architecture](images/Digram.png)
 
 ---
 
