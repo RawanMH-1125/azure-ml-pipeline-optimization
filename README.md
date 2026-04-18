@@ -65,6 +65,28 @@ The best model achieved an accuracy of approximately 0.9138.
 
 ---
 
+## Pipeline Architecture Details
+
+The HyperDrive pipeline was designed to efficiently optimize the Logistic Regression model through careful selection of sampling strategy and early stopping policy.
+
+### Parameter Sampling Strategy
+
+RandomParameterSampling was chosen over Grid or Bayesian sampling due to its computational efficiency and ability to explore a wide range of hyperparameter values. Unlike Grid Sampling, which exhaustively evaluates all combinations and can be expensive, random sampling provides good coverage of the hyperparameter space with fewer runs. This makes it more suitable for scalable and time-constrained experiments.
+
+### Early Stopping Policy
+
+BanditPolicy was used as an early termination strategy to stop underperforming runs. It evaluates model performance at regular intervals and terminates runs that do not meet a defined performance threshold. This prevents unnecessary resource usage and allows more focus on promising configurations, improving overall training efficiency.
+
+### Data Preprocessing Impact
+
+The dataset contains multiple categorical variables, which were transformed using one-hot encoding and binary encoding techniques. This step is essential for Logistic Regression, as it requires numerical input features. Additionally, mapping categorical values such as month and day_of_week into numerical representations helps the model capture temporal patterns more effectively.
+
+### Model Choice
+
+Logistic Regression was selected as a baseline model due to its simplicity, interpretability, and efficiency. It provides a strong starting point for binary classification problems and allows for clear evaluation of the impact of hyperparameter tuning using HyperDrive.
+
+---
+
 ## AutoML Pipeline
 
 AutoML was used to automate model selection and training. Multiple algorithms were evaluated, and the best-performing model was selected automatically.
@@ -141,12 +163,16 @@ The final model was successfully registered and is ready for deployment.
 
 Future improvements could include:
 
-- Applying advanced feature engineering techniques (e.g., interaction features and feature scaling) to enhance model performance  
-- Expanding the HyperDrive search space and experimenting with different sampling strategies to achieve better optimization  
-- Implementing more robust cross-validation techniques (e.g., k-fold cross-validation) to improve model generalization  
-- Exploring advanced ensemble methods such as stacking and blending beyond AutoML defaults  
-- Deploying the model as a web service and monitoring performance over time to detect data drift and ensure model reliability in production  
+- **Feature Engineering:** Creating interaction features or polynomial features could help capture non-linear relationships that Logistic Regression may not model effectively, potentially improving predictive performance.
 
+- **Handling Class Imbalance:** The dataset may contain imbalanced classes. Applying techniques such as SMOTE or using class weights could improve the model’s ability to correctly predict the minority class, leading to better recall and overall performance.
+
+- **Hyperparameter Optimization:** Expanding the HyperDrive search space (e.g., exploring different values for C, solver, and penalty) could lead to better model tuning and improved results.
+
+- **Advanced Ensemble Methods:** Exploring ensemble techniques such as stacking or boosting (beyond AutoML defaults) could improve performance by combining multiple models and reducing variance.
+
+- **Cross-Validation Improvements:** Using more robust validation strategies such as k-fold cross-validation could improve model generalization and reduce overfitting.
+  
 ----
 
 ## Author:
