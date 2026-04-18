@@ -118,6 +118,12 @@ Model details:
 
 ---
 
+## Resource Management
+
+To ensure efficient use of cloud resources and avoid unnecessary costs, the compute cluster used in this project was deleted after completing all experiments. This follows best practices in cloud-based machine learning by managing resource lifecycle effectively.
+
+----
+
 ## Conclusion
 
 HyperDrive improved the performance of the Logistic Regression model through hyperparameter tuning. However, AutoML identified a more optimal model, XGBoost, which achieved better overall performance.
