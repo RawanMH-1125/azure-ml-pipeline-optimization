@@ -33,9 +33,10 @@ A CPU-based compute cluster was created and used to execute all experiments in A
 
 The following preprocessing steps were applied to the dataset:
 
-- Label encoding for categorical variables  
-- Feature scaling using StandardScaler  
-- Splitting the dataset into training and testing sets  
+- Handling missing values by removing null records  
+- Encoding categorical variables using one-hot encoding and binary encoding  
+- Mapping categorical features such as month and day_of_week to numerical values  
+- Splitting the dataset into training and testing sets   
 
 ---
 
@@ -95,8 +96,12 @@ The results demonstrate strong model performance with good balance between preci
 
 ## Model Comparison
 
+To ensure a fair comparison, AUC was considered as a consistent evaluation metric, as it provides a more robust measure of classification performance across different thresholds.
+
 HyperDrive achieved an accuracy of approximately 0.913.  
 AutoML achieved a higher performance with an AUC of approximately 0.945.
+
+The superior performance of AutoML can be attributed to its ability to explore more complex models such as XGBoost, which can capture non-linear relationships better than Logistic Regression.
 
 Based on these results, the AutoML model was selected as the best model.
 
