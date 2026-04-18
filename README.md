@@ -41,16 +41,17 @@ The following preprocessing steps were applied to the dataset:
 
 ## HyperDrive Pipeline
 
-A Logistic Regression model was trained using HyperDrive to optimize hyperparameters.
+Used to optimize a Logistic Regression model by exploring different combinations of hyperparameters. A parameter sampling strategy (Random Sampling) was applied to efficiently search the hyperparameter space and increase the likelihood of identifying an optimal configuration.
 
-The following parameters were tuned:
+An early termination policy (BanditPolicy) was implemented to stop underperforming runs early. This reduces computational cost and allows resources to be allocated to more promising experiments, improving overall efficiency.
 
-- Regularization parameter C  
-- Maximum number of iterations  
+The following hyperparameters were tuned:
+- Regularization parameter (C)  
+- Maximum number of iterations (max_iter)
 
-The tuning strategy included random sampling and early stopping to efficiently explore the parameter space.
+This approach balances exploration and efficiency, making HyperDrive suitable for controlled and scalable model optimization.
 
-Results are shown below:
+The results of the HyperDrive experiment are shown below:
 
 <p align="center">
   <img src="images/hyperdrive_metric.png" width="800"/>  
