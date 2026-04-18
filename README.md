@@ -126,13 +126,20 @@ The final model was successfully registered and is ready for deployment.
 
 ---
 
-## Future Work
+## Future Improvements 
 
-Possible improvements include deploying the model as a real-time endpoint, performing feature importance analysis, and optimizing the model further based on business requirements.
+Future improvements could include:
 
+- Applying advanced feature engineering techniques (e.g., interaction features and feature scaling) to enhance model performance  
+- Expanding the HyperDrive search space and experimenting with different sampling strategies to achieve better optimization  
+- Implementing more robust cross-validation techniques (e.g., k-fold cross-validation) to improve model generalization  
+- Exploring advanced ensemble methods such as stacking and blending beyond AutoML defaults  
+- Deploying the model as a web service and monitoring performance over time to detect data drift and ensure model reliability in production  
+
+---
 
 ## Author:
 
-# Rawan Alhammad  
+# Rawan Alhammad
 Azure Machine Learning Project 
 
