@@ -42,7 +42,7 @@ The following preprocessing steps were applied to the dataset:
 
 ## HyperDrive Pipeline
 
-Used to optimize a Logistic Regression model by exploring different combinations of hyperparameters. A parameter sampling strategy (Random Sampling) was applied to efficiently search the hyperparameter space and increase the likelihood of identifying an optimal configuration.
+HyperDrive was used to optimize a Logistic Regression model by exploring different combinations of hyperparameters. A parameter sampling strategy (Random Sampling) was applied to efficiently search the hyperparameter space and increase the likelihood of identifying an optimal configuration.
 
 An early termination policy (BanditPolicy) was implemented to stop underperforming runs early. This reduces computational cost and allows resources to be allocated to more promising experiments, improving overall efficiency.
 
@@ -147,7 +147,7 @@ Future improvements could include:
 - Exploring advanced ensemble methods such as stacking and blending beyond AutoML defaults  
 - Deploying the model as a web service and monitoring performance over time to detect data drift and ensure model reliability in production  
 
----
+----
 
 ## Author:
 
