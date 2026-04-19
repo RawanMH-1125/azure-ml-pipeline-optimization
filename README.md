@@ -149,6 +149,10 @@ Model details:
 
 To ensure efficient use of cloud resources and avoid unnecessary costs, the compute cluster used in this project was deleted after completing all experiments. This follows best practices in cloud-based machine learning by managing resource lifecycle effectively.
 
+<p align="center">
+  <img src="images/cluster_cleanup.png" width="600"/>
+</p>
+
 ----
 
 ## Conclusion
