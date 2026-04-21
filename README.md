@@ -33,7 +33,7 @@ A CPU-based compute cluster was created and used to execute all experiments in A
 
 The following preprocessing steps were applied to the dataset:
 
-- Handling missing values by removing null records  
+- The dataset uses "unknown" to represent missing values, which were handled during preprocessing. 
 - Encoding categorical variables using one-hot encoding and binary encoding  
 - Mapping categorical features such as month and day_of_week to numerical values  
 - Splitting the dataset into training and testing sets   
@@ -61,7 +61,9 @@ The results of the HyperDrive experiment are shown below:
   <img src="images/hyperdrive_summary.png" width="800"/>  
 </p>
 
-The best model achieved an accuracy of approximately 0.9138.
+The best HyperDrive model achieved:
+- Accuracy: 0.849
+- AUC: 0.922
 
 ---
 
@@ -118,14 +120,11 @@ The results demonstrate strong model performance with good balance between preci
 
 ## Model Comparison
 
-To ensure a fair comparison, AUC was considered as a consistent evaluation metric, as it provides a more robust measure of classification performance across different thresholds.
+To ensure a fair comparison, AUC was used as the primary evaluation metric, as accuracy can be misleading in imbalanced datasets where the majority class dominates the predictions.
 
-HyperDrive achieved an accuracy of approximately 0.913.  
-AutoML achieved a higher performance with an AUC of approximately 0.945.
+The HyperDrive model achieved an AUC of 0.922, while the AutoML model achieved a higher AUC of 0.945. This demonstrates that AutoML outperformed HyperDrive in terms of classification performance.
 
-The superior performance of AutoML can be attributed to its ability to explore more complex models such as XGBoost, which can capture non-linear relationships better than Logistic Regression.
-
-Based on these results, the AutoML model was selected as the best model.
+This result is expected, as AutoML selected XGBoost, which can capture non-linear relationships and feature interactions more effectively than Logistic Regression.
 
 ---
 
@@ -155,9 +154,22 @@ To ensure efficient use of cloud resources and avoid unnecessary costs, the comp
 
 ----
 
+## Improvements Based on Feedback
+
+The project was refined based on the feedback received:
+
+- AUC was added as a primary metric to ensure fair comparison with AutoML
+- random_state was set for reproducibility
+- class_weight='balanced' was used to address class imbalance
+- HyperDrive search space was expanded to include penalty and solver
+- Data preprocessing description was corrected to reflect the use of "unknown" values
+- Unused code and imports were cleaned up
+
+----
+
 ## Conclusion
 
-HyperDrive improved the performance of the Logistic Regression model through hyperparameter tuning. However, AutoML identified a more optimal model, XGBoost, which achieved better overall performance.
+HyperDrive improved the performance of the Logistic Regression model through hyperparameter tuning. However, AutoML outperformed HyperDrive by selecting XGBoost, which is better at capturing complex non-linear relationships in the dataset.
 
 The final model was successfully registered and is ready for deployment.
 
@@ -165,17 +177,10 @@ The final model was successfully registered and is ready for deployment.
 
 ## Future Improvements 
 
-Future improvements could include:
-
-- **Feature Engineering:** Creating interaction features or polynomial features could help capture non-linear relationships that Logistic Regression may not model effectively, potentially improving predictive performance.
-
-- **Handling Class Imbalance:** The dataset may contain imbalanced classes. Applying techniques such as SMOTE or using class weights could improve the model’s ability to correctly predict the minority class, leading to better recall and overall performance.
-
-- **Hyperparameter Optimization:** Expanding the HyperDrive search space (e.g., exploring different values for C, solver, and penalty) could lead to better model tuning and improved results.
-
-- **Advanced Ensemble Methods:** Exploring ensemble techniques such as stacking or boosting (beyond AutoML defaults) could improve performance by combining multiple models and reducing variance.
-
-- **Cross-Validation Improvements:** Using more robust validation strategies such as k-fold cross-validation could improve model generalization and reduce overfitting.
+- Applying advanced feature engineering to capture more complex patterns in the data  
+- Exploring more advanced models within HyperDrive beyond Logistic Regression  
+- Using cross-validation techniques to improve model generalization  
+- Investigating ensemble methods to further enhance performance  
   
 ----
 
