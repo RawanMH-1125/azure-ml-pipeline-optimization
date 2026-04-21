@@ -70,7 +70,7 @@ def main():
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", float(accuracy))
 
-    # 🔥 AUC
+    # AUC
     y_proba = model.predict_proba(x_test)[:, 1]
     auc = roc_auc_score(y_test, y_proba)
     run.log("AUC", float(auc))
