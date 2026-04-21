@@ -57,12 +57,11 @@ This approach allows exploration of both model complexity and optimization behav
 The results of the HyperDrive experiment are shown below:
 
 <p align="center">
-  <img src="images/Trials Visualization ).png" width="800"/>  
+  <img src="images/Metrics (AUC + Accuracy).png" width="600"/>  
 </p>
 <p align="center">
-  <img src="images/Metrics (AUC + Accuracy).png" width="800"/>  
+  <img src="images/Trials Visualization ).png" width="900"/>  
 </p>
-
 
 The best HyperDrive model achieved:
 - Accuracy: 0.849
@@ -72,8 +71,6 @@ The best HyperDrive model achieved:
   <img src="images/Best Run Details.png" width="800"/>  
 </p>
 
-
-The best-performing run is highlighted above based on the highest AUC.
 
 ---
 
