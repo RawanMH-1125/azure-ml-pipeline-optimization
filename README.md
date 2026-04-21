@@ -161,19 +161,6 @@ To ensure efficient use of cloud resources and avoid unnecessary costs, the comp
 
 ----
 
-## Improvements Based on Feedback
-
-The project was refined based on the feedback received:
-
-- AUC was added as a primary metric to ensure fair comparison with AutoML
-- random_state was set for reproducibility
-- class_weight='balanced' was used to address class imbalance
-- HyperDrive search space was expanded to include penalty and solver
-- Data preprocessing description was corrected to reflect the use of "unknown" values
-- Unused code and imports were cleaned up
-
-----
-
 ## Conclusion
 
 HyperDrive improved the performance of the Logistic Regression model through hyperparameter tuning. However, AutoML outperformed HyperDrive by selecting XGBoost, which is better at capturing complex non-linear relationships in the dataset.
