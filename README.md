@@ -60,7 +60,7 @@ The results of the HyperDrive experiment are shown below:
   <img src="images/Metrics (AUC + Accuracy).png" width="600"/>  
 </p>
 <p align="center">
-  <img src="images/Trials Visualization ).png" width="900"/>  
+  <img src="images/Trials Visualization ).png" width="800"/>  
 </p>
 
 The best HyperDrive model achieved:
