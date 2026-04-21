@@ -55,15 +55,22 @@ This approach balances exploration and efficiency, making HyperDrive suitable fo
 The results of the HyperDrive experiment are shown below:
 
 <p align="center">
-  <img src="images/hyperdrive_metric.png" width="800"/>  
+  <img src="images/Metrics (AUC + Accuracy).png" width="800"/>  
 </p>
 <p align="center">
-  <img src="images/hyperdrive_summary.png" width="800"/>  
+  <img src="images/Trials Visualization ).png" width="800"/>  
 </p>
 
 The best HyperDrive model achieved:
 - Accuracy: 0.849
 - AUC: 0.922
+
+<p align="center">
+  <img src="images/Best Run Details.png" width="800"/>  
+</p>
+
+
+The best-performing run is highlighted above based on the highest AUC.
 
 ---
 
