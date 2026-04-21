@@ -47,19 +47,22 @@ HyperDrive was used to optimize a Logistic Regression model by exploring differe
 An early termination policy (BanditPolicy) was implemented to stop underperforming runs early. This reduces computational cost and allows resources to be allocated to more promising experiments, improving overall efficiency.
 
 The following hyperparameters were tuned:
+
 - Regularization parameter (C)  
-- Maximum number of iterations (max_iter)
+- Maximum number of iterations (max_iter)  
+- Penalty type (l1, l2)  
+- Solver (liblinear, saga)  
 
-This approach balances exploration and efficiency, making HyperDrive suitable for controlled and scalable model optimization.
-
+This approach allows exploration of both model complexity and optimization behavior, making HyperDrive more effective for model tuning.
 The results of the HyperDrive experiment are shown below:
 
 <p align="center">
-  <img src="images/Metrics (AUC + Accuracy).png" width="800"/>  
-</p>
-<p align="center">
   <img src="images/Trials Visualization ).png" width="800"/>  
 </p>
+<p align="center">
+  <img src="images/Metrics (AUC + Accuracy).png" width="800"/>  
+</p>
+
 
 The best HyperDrive model achieved:
 - Accuracy: 0.849
